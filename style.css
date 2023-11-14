@@ -1,0 +1,219 @@
+*,
+*::after,
+*::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.25%;
+    font-family: sans-serif;
+}
+
+.container{
+    background: #220775;
+    background: linear-gradient(45deg, #8028c8, #240876);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+}
+
+.card>.heading{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.card>.display-container{
+    width: 100%;
+    margin-bottom: 2rem;
+    background: #14073a;
+    border-radius: 1rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 4px -3px rgb(53, 133, 252);
+}
+.display-container>.display{
+    background: #14073a;
+    border: none;
+    outline: none;
+    margin-left: 1.5rem;
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: .4px;
+    color: rgb(240, 255, 110);
+}
+.display-container>.display::placeholder{
+    color: rgb(240, 255, 110);
+}
+.display-container>.copy-btn{
+    position: relative;
+    background: #14073a;
+    border: none;
+    color: rgb(53, 133, 252);
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+.copy-message{
+    display: none;
+    top: -25%;
+    left: -1.8rem;
+    position: absolute;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    background: rgb(53, 133, 252);
+}
+.active{
+    display: block;
+}
+.card>.input-container{
+    background: #14073a;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0px 5px 4px -3px rgb(53, 133, 252);
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+}
+.length-container>.para, .length-container>.length{
+    letter-spacing: .4px;
+    font-size: 1.35rem;
+}
+.length-container>.length{
+    color: rgb(240, 255, 110);
+}
+
+#slider{
+    position: relative;
+    z-index: 2;
+    appearance: none;
+    width: 100%;
+    background-color: rgb(14, 97, 222);
+    background-size: 2rem 2rem;
+    margin: 1.25rem 0rem;
+    height: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+#slider::-webkit-slider-thumb{
+    position: relative;
+    z-index: 5;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgb(240, 255, 110);
+    transition: all 100ms ease-in;
+}
+#slider:focus{
+    border: 2px solid rgb(240, 255, 110);
+}
+#slider::-webkit-slider-thumb:hover{
+    background: black;
+    box-shadow: 0px 0px 10px rgb(240, 255, 110);
+}
+/* For firedox */
+#slider::-moz-range-thumb{
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgb(240, 255, 110);
+    transition: all 100ms ease-in;
+}
+#slider::-moz-range-thumb:hover{
+    background: black;
+    box-shadow: 0px 0px 10px rgb(240, 255, 110);
+}
+
+.inputs{
+    list-style-type: none;
+}
+.inputs>li{
+    display: flex;
+    gap: 1rem;
+    padding: .4rem 0rem;
+}
+.inputs .checkbox, .inputs .labels{
+    display: inline-block;
+}
+.inputs .checkbox{
+    appearance: none;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #14073a;
+    border: 1px solid aqua;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.checkbox:checked{
+    background: aqua;
+}
+.checkbox::before{
+    content: "✔";
+    position: absolute;
+    color: #14073a;
+    font-size: 1.05rem;
+    font-weight: bolder;
+    top: -.25rem;
+    left: .15rem;
+}
+.inputs .labels{
+    cursor: pointer;
+    font-size: 1.25rem;
+    letter-spacing: .4px;
+}
+
+.input-container>.strength{
+    padding: 1rem 0rem 2.5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+}
+.strength>.para{
+    letter-spacing: .4px;
+    font-size: 1.25rem;
+}
+.strength>.data-indicator{
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+}
+.generate-btn{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 2rem;
+    color: white;
+    background: rgb(14, 97, 222);
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: .4px;
+    box-shadow: 0px 6px 3px -2px rgb(240, 255, 110)
+}
